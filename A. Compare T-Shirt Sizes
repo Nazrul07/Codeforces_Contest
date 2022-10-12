@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,l,l1;
+    string s,s1;
+    char c,c1;
+    cin>>t;
+    for(i=0 ; i<t ; i++)
+    {
+        cin>>s>>s1;
+        l=s.size();
+        l1=s1.size();
+        c=s[l-1];
+        c1=s1[l1-1];
+        if(c==c1 && l==l1)
+            cout<<"="<<endl;
+        else if(c=='S' && c1=='S' && l>l1)
+            cout<<"<"<<endl;
+        else if(c=='S' && c1=='S' && l<l1)
+            cout<<">"<<endl;
+        else if(c=='M' && c1=='M' && l<l1)
+            cout<<"<"<<endl;
+        else if(c=='M' && c1=='M' && l>l1)
+            cout<<">"<<endl;
+        else if(c=='L' && c1=='L' && l<l1)
+            cout<<"<"<<endl;
+        else if(c=='L' && c1=='L' && l>l1)
+            cout<<">"<<endl;
+        else if(c=='L' && c1=='M')
+            cout<<">"<<endl;
+        else if(c=='M' && c1=='L')
+            cout<<"<"<<endl;
+        else if(c=='L' && c1=='S')
+            cout<<">"<<endl;
+        else if(c=='S' && c1=='L')
+            cout<<"<"<<endl;
+        else if(c=='M' && c1=='S')
+            cout<<">"<<endl;
+        else if(c=='S' && c1=='M')
+            cout<<"<"<<endl;
+    }
+    return 0;
+}
